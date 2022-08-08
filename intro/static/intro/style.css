@@ -1,0 +1,873 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar{
+    width: 12px;
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(transparent,#ffae00);
+    transition: 0.5s;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: linear-gradient(transparent,black);
+}
+
+
+
+
+body{
+    overflow-x: hidden;
+    width: 100vw;
+    overflow: overlay;
+}
+.navbar{
+    width: 100%;
+    position: fixed;
+    z-index: 5;
+    overflow-x: hidden;
+
+}
+.navbar.sticky{
+    background-color: black;
+}
+.navbar .content{
+    max-width: 1250px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: aquamarine; */
+}
+.content .menu-list{
+    display: inline-flex;
+}
+.menu-list li{
+    list-style: none;
+    padding: 20px 15px;
+}
+.menu-list li a{
+    text-decoration: none;
+    font-size: 20px;
+    color:white;
+    cursor: pointer;
+    transition: color 0.5 ease;
+}
+.menu-list li a:hover{
+    color:orange;
+}
+.content .icon{
+    color: white;
+    font-size: 20px;
+    display: none;
+    position: absolute;
+    right: 30px;
+    cursor:pointer;
+
+}
+.content .icon.cancel-btn{
+    position:absolute;
+    right: 30px;
+    top: 30px;
+}
+.content .logo a img{
+    margin-top: 10px;
+    width: auto;
+    height: 70px;
+}
+header{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    overflow-x: hidden;
+}
+.header{
+    margin:0 50px;
+    height: 100%;
+    display: flex;
+    background-color: black;
+}
+.header .left{
+    width: 40%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header .left p{
+    color: white;
+    font-size: 80px;
+    font-weight: bold;
+}
+.header .left p::after{
+    content: " ";
+    border: 2px solid ;
+    margin-left: 5px;
+    font-size: 60px;
+    color: #ffae00;
+    animation: example 0.5s infinite;
+}
+@keyframes example {
+    0% {color:#ffae00;}
+    49% {color:#ffae00;}
+    50% {color:transparent;}
+    99% {color:transparent;}
+    100% {color:#ffae00;}
+  }
+.header .right{
+    width: 60%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation: showpic 0.5s ease;
+}
+@keyframes showpic {
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity:100%;
+    }
+}
+.header .right .headerpic {
+    width: 700px;
+    height: auto;
+    position: absolute;
+    transition: 2s;
+}
+
+
+.header .right .headerbackpic {
+    width: 700px;
+    height: auto;
+    position: absolute;
+    transition: 2s;
+}
+
+
+.about{
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    background-color:white;
+    overflow-x: hidden;
+}
+.about .left{
+    width: 50%;
+    background-color: black;
+    color:white ;
+    box-shadow: 10px 15px #dddddd73;
+    display: flex;
+    justify-content: center;
+}
+.about .left .text{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text h2{
+    color: #ffae00;
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+}
+.text p{
+    margin-top: 40px;
+    color:white;
+    font-size: 30px;
+    text-align: center;
+}
+.about .right{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imageClass{
+    animation: aboutAni 3100ms ease infinite;
+    display: flex;
+}
+.about .right .about-image {
+    width:300px;
+    height: auto;
+}
+@keyframes aboutAni{
+    0%{transform: translateX(200px);}
+    25%{transform: translateX(0px);}
+    85%{transform: translateX(0px);
+        opacity: 100%;}
+    95%{transform: translateX(-180px);}
+    100%{transform: translateX(-200px);
+    opacity: 0%;}
+    
+}
+.aboutShow{
+    display: block;
+}
+
+.myproject{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    overflow-x: hidden;
+}
+.myproject h2{
+    width: 100%;
+    text-align: center;
+}
+.myproject .slider{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.myproject #mainSlider{
+    width: 600px;
+    height: auto;
+    margin-top: 20px;
+    box-shadow: 10px 15px 10px #6d6b6b73;
+    transition: 0.5s;
+}
+
+.slider .btnPro{
+    width: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnPro .fas{
+    font-size: 3rem;
+    color: black;
+    transition: 0.5s;   
+}
+.btnPro .fas:hover{
+    color: #ffae00;  
+}
+.slider .content{
+    width: 80%;
+    display: inline-flex;
+    align-items:initial;
+    overflow-x: hidden;
+    margin: 10px 0px;
+}
+.content .image{
+    width: 180px;
+    height: 150px;
+    margin: 0px 10px;
+    transition: 0.5s;
+    box-shadow: 5px 3px 5px #6d6b6b73;
+}
+.content .image:hover{
+    transform: scale(1.1);
+    box-shadow: 15px 8px 20px #6d6b6b73;
+}
+.myproject .text #projectText{
+    font-size: 1.5rem;
+    color: black;
+}
+.myproject #visitBtn{
+    padding:20px 40px;
+    margin-top: 20px;
+    width: 80px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    font-size:1.2rem ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.myproject #visitBtn:hover{
+    background-color: #ffae00;
+    box-shadow: 10px 10px 25px #9b9b9b73;
+}
+
+
+.client{
+    height:50vh;
+    width: 100%;
+    background-color: dimgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    overflow-x: hidden;
+
+    
+    
+}
+
+.client .msg{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 90%;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px rgb(51, 51, 51);
+    animation: moveClient 5s infinite;
+}
+@keyframes moveClient{
+    0%{
+        opacity: 0%;
+        
+    }
+    20%{
+        opacity: 100%;
+    }
+    80%{
+        opacity: 100%;
+    }
+    100%{
+        opacity: 0%;
+    }
+}
+.msg .person{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: auto;
+    width: 40%;
+    margin: auto;
+}
+.person .pic{
+    height: 100px;
+    width: 100px;
+    background-color: violet;
+    border-radius: 50%;
+}
+.person .name{
+    font-size: 1.5rem;
+    margin-left: 20px;
+}
+.msg .comment{
+    width: 100%;
+    height: 70%;
+    background-color: rgb(167, 167, 167);
+    border-radius: 0px 0px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;   
+}
+.comment .commentText{
+    font-size: 1.3rem;
+    text-align: center;
+}
+.comment #Clientstar{
+    display: flex;
+}
+#Clientstar .star{
+    width: 50px;
+    height: auto;
+}
+footer{
+    width: 100%;
+    height: 40vh;
+    background-color: rgb(47, 47, 47);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow-x: hidden;
+    color: white;
+}
+footer .container{
+    width: 80%;
+    height: 80%;
+    display: flex;
+}
+footer .container .rightContainer{
+    display: flex;
+    width: 70%;
+    justify-content: space-around;
+}
+footer .first{
+    width: 40%;
+}
+.first .Links{
+    margin-top: 10px;
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+}
+.first .linkIcon{
+    width: 30px;
+    height: auto;
+}
+footer .second{
+    width: 30%;
+}
+.second a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: white;
+}
+footer h2{
+    font-size: 1.2rem;
+    margin-top: 20px;
+    color:#ffae00;
+}
+footer .third{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.contactLinks{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.contactLinks i{
+    font-size: 1.8rem;
+}
+.contactLinks i:hover{
+    color: #ffae00;
+}
+
+footer .bottomFooter{
+    width: 100%;
+    background-color: #ffae00;
+    display: flex;
+    justify-content: center;
+    height: 20%;
+}
+.bottomFooter .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+@media only screen and (max-width:1300px){
+    
+    .header .right .headerpic {
+        width: 500px;
+    }
+    .header .right .headerbackpic {
+        width: 500px;
+    }
+    
+    .content .logo{
+        margin-left: 20px;
+    }
+    .content .menu-list{
+        margin-right: 20px;
+    }
+    @keyframes aboutAni{
+        0%{transform: translateX(150px);}
+        25%{transform: translateX(0px);}
+        85%{transform: translateX(0px);
+            opacity: 100%;}
+        95%{transform: translateX(-120px);}
+        100%{transform: translateX(-150px);
+        opacity: 0%;}
+        
+    }
+    .about .right .about-image {
+        width:250px;
+        height: auto;
+    }
+    footer .first{
+        width: 50%;
+    }
+    footer .second{
+        width: 20%;
+    }
+    
+
+}
+@media only screen and (max-width:992px){
+    header{
+        height: 60vh;
+    }
+    .header{
+        margin:0 10px;
+    }
+    .header .left{
+        width: 40%;
+    }
+    .header .left{
+        margin-left: 20px;
+    }
+    .header .left p{
+        font-size: 60px;
+    }
+    .header .left p::after{
+        font-size: 40px;
+    }
+    .header .right{
+        width: 60%;
+    }
+    .header .right .headerpic {
+        width: 400px;
+    }
+    .header .right .headerbackpic {
+        width: 400px;
+    }
+    .about{
+        height: 50vh;
+    }
+    .about .left .text{
+        width: 90%;
+    }
+    .imageClass{
+        animation: aboutAnishort 3000ms ease infinite;
+        display: flex;
+    }
+
+    @keyframes aboutAnishort{
+        0%{transform: translateX(100px);}
+        25%{transform: translateX(0px);}
+        85%{transform: translateX(0px);
+            opacity: 100%;}
+        95%{transform: translateX(-80px);}
+        100%{transform: translateX(-100px);
+        opacity: 0%;}
+        
+    }
+
+    .about .right .about-image {
+        width:200px;
+    }
+    .text h2{
+        font-size: 40px;
+    }
+    .text p{
+        margin-top: 30px;
+        font-size: 20px;
+    }
+    .myproject{
+        height: auto;
+    }
+    
+}
+@media only screen and (max-width:768px) {
+    ::-webkit-scrollbar{
+        display: none;
+    }
+    
+    *.disabled{
+        overflow-y: hidden;
+    }
+    .navbar .content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .content .logo{
+        margin: 10px 0px 10px 20px;
+
+    }
+    .content .logo a img{
+        margin-top: 10px;
+        width: auto;
+        height: 50px;
+    }
+    .content .menu-list{
+        display: block;
+        position: fixed;
+        text-align: center;
+        margin-right: 0px;
+        top: 0px;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background-color: black;
+        transition: right 0.5s ease;
+
+    }
+    .menu-list li{
+        margin-top: 70px;
+    }
+    .menu-list li a{
+        font-size: 25px;
+    }
+    .content .icon{
+        display: block;
+
+    }
+    .menu-list.show{
+        right: 0%;
+    }
+    .menu-btn.hide{
+        display: none;
+    }
+    .header{
+        margin: 0;
+    }
+    .about{
+        height: 80vh;
+        display: block;
+    }
+    .about .left{
+        width: 100%;
+        height: 60%;
+    }
+    .about .right{
+        width: 100%;
+        height: 40%;
+        border-bottom: 2px solid rgb(214, 214, 214);
+    }
+    .about .right .about-image {
+        width:150px;
+    }
+
+    .myproject{
+        border-top: 1px rgb(0, 0, 0);
+        margin-top: 20px;
+        justify-content: space-between;
+    }
+    .myproject #mainSlider{
+        width: 500px;
+        height: auto;
+    }
+    .btnPro .fas{
+        font-size: 2rem;  
+    }
+    .content .image{
+        width: 160px;
+        height: 120px;
+    }
+    .myproject .text #projectText{
+        font-size: 1.5rem;
+    }
+    .myproject #visitBtn{
+        padding:10px 20px;
+        margin-top: 20px;
+        width: 60px;
+        height: 30px;
+        font-size:1rem;
+    }
+    #Clientstar .star{
+        width: 40px;
+        height: auto;
+    }
+    footer{
+        width: 100%;
+        height: 60vh;
+    }
+    footer .container{
+        width: 80%;
+        height: 80%;
+        display: flex;
+    }
+    footer .container .rightContainer{
+        display: block;
+    }
+    .second .pages{
+        display: flex;
+    }
+    .second a{
+        display: block;
+        margin-right: 20px;
+    }
+}
+@media only screen and (max-width:600px){
+
+    body{
+        overflow-x: hidden;
+    }
+    header{
+        height: 60vh;
+    }
+    .header{
+        margin: 0;
+    }
+    .header .left{
+        width: 100%;
+        margin: 0;
+    }
+    
+    .header .left{
+        margin:0%;
+    }
+    .header .left p{
+        font-size: 40px;
+    }
+    .header .left p::after{
+        font-size: 30px;
+    }
+    .header .right{
+        display: none;
+    }
+    .about .right .about-image{
+        width: 100px;
+    }
+    .imageClass{
+        animation: aboutAnishort 3000ms ease infinite;
+        display: flex;
+    }
+
+    @keyframes aboutAnishort{
+        0%{transform: translateX(50px);}
+        25%{transform: translateX(0px);}
+        85%{transform: translateX(0px);
+            opacity: 100%;}
+        95%{transform: translateX(-40px);}
+        100%{transform: translateX(-50px);
+        opacity: 0%;}
+        
+    }
+    .about .right .about-image{
+        width: 100px;
+    }
+
+
+
+    .myproject{
+        height: auto;
+    }
+    .myproject #mainSlider{
+        max-width:80vw;
+        height: auto;
+    }
+    .myproject .slider{
+        height: auto;
+    }
+    .myproject.content{
+        height: auto;
+    }
+    .btnPro .fas{
+        font-size: 1.5rem;  
+    }
+    .content .image{
+        width: 120px;
+        height: 90px;
+    }
+    .client{
+        height: 60vh;
+    }
+    
+    .client .msg{
+        width: 90%;
+        height: 80%;
+        align-items: center;
+        justify-content: flex-start;
+        margin:20px 0px;
+        animation: moveClient 5s infinite;
+    }
+    @keyframes moveClient{
+        0%{
+            opacity: 0%;
+            
+        }
+        20%{
+            opacity: 100%;
+        }
+        80%{
+            opacity: 100%;
+        }
+        100%{
+            opacity: 0%;
+        }
+    }
+    .msg .person{
+        width: 80%;
+        margin:10px auto;
+    }
+    .person .pic{
+        height: 50px;
+        width: 50px;
+    }
+    .person .name{
+        font-size: 1rem;
+        margin-left: 20px;
+    }
+    .msg .comment{
+        width: 100%;
+        height: inherit;  
+    }
+    .comment .commentText{
+        width: 80%;
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+
+    #Clientstar .star{
+        margin: 20px 0px;
+        width: 30px;
+        height: auto;
+    }
+    
+    footer{
+        width: 100%;
+        height: 100vh;
+    }
+    footer .container{
+        width: 90%;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    footer .container .rightContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .second .pages{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .second a{
+        display: block;
+        margin-right: 20px;
+    }
+
+
+
+    footer .first{
+        width: 100%;
+    }
+    .first .Links{
+        width: 60%;
+        justify-content: space-between;
+    }
+
+    .first .linkIcon{
+        width: 30px;
+        height: auto;
+    }
+    footer .second{
+        width: 100%;
+    }
+    footer .third{
+        width: 100%;
+        align-items: flex-start;
+    }
+    
+    footer .bottomFooter{
+        height: 10%;
+    }
+    
+}

@@ -1,0 +1,128 @@
+*{
+    overflow-x: hidden;
+}
+nav{
+    background-color: black;
+}
+
+header{
+    width: 100vw;
+    height: 30vh;
+    background-image: url("images/contact.jpg");
+    background-origin: border-box;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+body>.contact{
+    width: 100vw;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.contact .wraper{
+    width:70vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:#ffae00;
+}
+.wraper h2{
+    color: white;
+    margin: 30px 0px;
+}
+#contactId{
+    height: 80%;
+    width: 70%;
+    overflow: hidden;
+}
+#contactId .formInput{
+    display: block;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.formInput input,.formInput textarea{
+    display: block;
+    width: 60%;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 5px 10px rgb(104, 104, 104);
+    border:none;
+    transition: 0.5s;
+}
+.formInput input:focus,.formInput textarea:focus{
+    outline:rgb(104, 104, 104);
+    border: 5px rgb(104, 104, 104);
+    box-shadow: 10px 10px 10px rgba(104, 104, 104,0.5);
+}
+
+
+.formInput textarea {
+    height: 150px;
+    resize: none;
+}
+.formInput small{
+    left: 0px;
+    right: 0px;
+    margin-top: 5px;
+    visibility: hidden;
+}
+
+#submitBtn input{
+    background-color: black;
+    color: white;
+    border: none;
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+}
+#submitBtn input:hover{
+    background-color: #c38500;
+    color: white;
+    border: none;
+    width: 100px;
+    height: 50px;
+}
+
+small.errorActive{
+    color: red;
+    visibility: visible;
+}
+@media only screen and (max-width:1300px){
+    .formInput input,.formInput textarea{
+        width: 80%;
+    }
+}
+@media only screen and (max-width:1300px){
+    .formInput input,.formInput textarea{
+        width: 90%;
+    }
+}
+@media only screen and (max-width:768px){
+    #contactId{
+        width: 100%;
+    }
+    .formInput input,.formInput textarea{
+        width: 80%;
+    }
+}
+@media only screen and (max-width:600px){
+
+    .contact .wraper{
+        width:100vw;
+    }
+
+    #contactId{
+        width: 80%;
+    }
+    .formInput input,.formInput textarea{
+        width: 90%;
+    }
+}

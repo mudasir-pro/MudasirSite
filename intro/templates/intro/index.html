@@ -1,0 +1,86 @@
+{% extends 'intro/base.html' %}
+{% block contentBase %}
+{% load static %}
+
+
+<header>
+    <div class="header">
+        <div class="left">
+            <p id="headerText"></p>
+        </div>
+        <div class="right">
+            
+            <img src="{% static 'intro/images/headerpic.png'%}" alt="" class="headerpic" id="headerpic">
+            <img src="{% static 'intro/images/headerpicback.png'%}" alt="" class="headerbackpic" id="headerBackpic">
+            
+        </div>
+    </div>
+</header>
+
+<div id="about" class="about">
+    <div class="left">
+        <div class="text">
+            <h2>About Me</h2>
+            <p>I am a full stack web developer with about 2 years of experience. I am creating the
+                responsive website by using my excellent
+                expertise on HTML, Css,JavaScript,react js ,python and django </p>
+        </div>
+    </div>
+    <div class="right">
+        <div class="imageClass">
+            <img class="about-image" id="imageAboutOne" src="">
+            <img class="about-image" id="imageAboutTwo" src="">
+        </div>
+    </div>
+
+</div>
+
+<div id="myproject" class="myproject">
+    <h2>My project</h2>
+    <img src="{% static 'intro/images/first.jpg' %}" alt="" id="mainSlider">
+    <div class="slider">
+        <div class="btnPro" id="lbutton"><i class="fas fa-angle-left" onclick="pre()"></i></div>
+        <div class="content" id="main">
+            <img onclick="swip(this)" id="0" class="image" src="{% static 'intro/images/first.jpg'%}">
+            <img onclick="swip(this)" id="1" class="image" src="{% static 'intro/images/second.jpg'%}">
+            <img onclick="swip(this)" id="2" class="image" src="{% static 'intro/images/three.jpg'%}">
+            <img onclick="swip(this)" id="3" class="image" src="{% static 'intro/images/four.jpg'%}">
+            <img onclick="swip(this)" id="4" class="image" src="{% static 'intro/images/five.jpg'%}">
+            <img onclick="swip(this)" id="5" class="image" src="{% static 'intro/images/six.jpg'%}">
+            <img onclick="swip(this)" id="6" class="image" src="{% static 'intro/images/first.jpg'%}">
+            <img onclick="swip(this)" id="7" class="image" src="{% static 'intro/images/second.jpg'%}">
+            <img onclick="swip(this)" id="8" class="image" src="{% static 'intro/images/three.jpg'%}">
+            <img onclick="swip(this)" id="9" class="image" src="{% static 'intro/images/four.jpg'%}">
+            <img onclick="swip(this)" id="10" class="image" src="{% static 'intro/images/five.jpg'%}">
+            <img onclick="swip(this)" id="11" class="image" src="{% static 'intro/images/six.jpg'%}">
+        </div>
+        <div class="btnPro" id="rbutton"><i class="fas fa-angle-right" onclick="next()"></i></div>
+    </div>
+    <div class="text">
+        <p id="projectText">This is First Web<span></span></p>
+    </div>
+    <div id="visitBtn" href="">Visit</div>
+</div>
+
+<div class="client">
+    <div class="msg">
+        <div class="person">
+            <img id="pic" class="pic" src=""></img>
+            <p id="name" class="name"></p>
+        </div>
+        <div class="comment">
+            <p id="commentText" class="commentText"></p>
+            <p id="onText" class="onText"></p>
+            <div id="Clientstar">
+                <img src="" alt="" class="star">
+                <img src="" alt="" class="star">
+                <img src="" alt="" class="star">
+                <img src="" alt="" class="star">
+                <img src="" alt="" class="star">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock contentBase %}

@@ -1,0 +1,99 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{%static 'intro/style.css'%}">
+    {% if style %}
+    <link rel="stylesheet" href="{%static 'intro/style.css' %}">
+    <link rel="stylesheet" href="{%static 'intro/style2.css' %}">
+    {% else %}
+    <link rel="stylesheet" href="{%static 'intro/style.css' %}">
+    {% endif %}
+    <title>Mudasir</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="content">
+            <div class="logo"><a href="index.html"><img src="{% static 'intro/images/Logo.png' %}"></a></div>
+            <ul class="menu-list">
+                <div onclick="cancelBtn()" class="icon cancel-btn">
+                    <i class="fas fa-times"></i>
+    
+                </div>
+                <li><a onclick="cancelBtn()" href="/">Home</a></li>
+                <li><a onclick="cancelBtn()" href="/#about">About</a></li>
+                <li><a onclick="cancelBtn()" href="/#myproject">Portfolio</a></li>
+                <li><a onclick="cancelBtn()" href="/contact">Contact</a></li>
+            </ul>
+    
+            <div onclick="cancelBtn()" class="icon menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+    {% block  contentBase%}{% endblock  %}
+    <footer>
+        <div class="container">
+            <div class="rightContainer">
+                <div class="first">
+                    <div class="address">
+                        <h2>Office Address</h2>
+                        <p>C4512 Dummy Address ABC Area Karachi Pakistan</p>
+                    </div>
+                    <div class="proLink">
+                        <h2>Professional Links</h2>
+                        <div class="Links">
+                            <img onmouseover="src='{% static "intro/images/gitActive.png" %}'" onmouseout="src='{% static "intro/images/git.png" %}'"
+                                src="{% static 'intro/images/git.png' %}" alt="" class="linkIcon">
+                            <img onmouseover="src='{% static "intro/images/fiverrActive.png" %}'" onmouseout="src='{% static "intro/images/fiverr.png" %}'"
+                                src="{% static 'intro/images/fiverr.png' %}" alt="" class="linkIcon">
+                            <img onmouseover="src='{% static "intro/images/upworkActive.png" %}'" onmouseout="src='{% static "intro/images/upwork.png" %}'"
+                                src="{% static 'intro/images/upwork.png' %}" alt="" class="linkIcon">
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="second">
+                    <div class="pages">
+                        <a href="#">Home</a>
+                        <a href="#">About</a>
+                        <a href="#">Porfolio</a>
+                        <a href="#">Contact</a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="third">
+                <div class="contact">
+                    <h2>Contact Number</h2>
+                    <p>+92-00-102-111</p>
+                    <h2>Whatspp Number</h2>
+                    <p>+92-02-332-561</p>
+                    <h2>Contact Links</h2>
+                    <div class="contactLinks">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-twitter-square"></i>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+        <div class="bottomFooter">
+            <div class="container">
+                <p>COPYRIGHT 2022 MudasirCorporation</p>
+            </div>
+        </div>
+    </footer>
+<script src="{%static 'intro/myscript.js'%}"></script>
+<script src="{%static 'intro/call.js'%}"></script>
+<script src="{%static 'intro/contact.js'%}"></script>
+</body>
+</html>

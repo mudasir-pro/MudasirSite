@@ -1,0 +1,38 @@
+{% extends 'intro/base.html' %}
+{% block contentBase %}
+<header>
+</header>
+<div class="contact">
+    <div class="wraper">
+        <h2>Contact Us</h2>
+        <form action="/contact" id="contactId" name="myForm" onsubmit="return formValidation()" method="POST">
+            {% csrf_token %}
+            <div id="fName" class="formInput  jsform">
+                <input type="text" name="fName" required  placeholder="First Name">
+                <small >Error Message</small>
+            </div>
+
+            <div id="lName" class="formInput jsform">
+                <input type="text" name="lName" required  placeholder="Last Name">
+                <small>Error Message</small>
+            </div>
+
+            <div id="email" class="formInput jsform">
+                <input type="email" name="email" required  placeholder="Email@abc.com">
+                <small>Error Message</small>
+            </div>
+
+            <div id="message" class="formInput">
+                <textarea id="message" name="message" required  placeholder="Message...................."></textarea>
+                <small>Error Message</small>
+            </div>
+
+            <div id="submitBtn" class="formInput">
+            <input onclick="formValidation()" type="submit" id="submitBtn" >
+            </div>
+
+        </form>
+    </div>
+</div>
+
+{% endblock contentBase %}
